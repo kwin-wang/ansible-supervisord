@@ -6,6 +6,8 @@ It can additionally be used as a playbook for quickly provisioning hosts.
 
 Vagrant machines are provided to produce VMs for integration testing.
 
+**Note:** This role update from [zenoamaro's anasible-supervisord](https://github.com/zenoamaro/ansible-supervisord)
+
 
 Supports
 --------
@@ -16,7 +18,7 @@ Supported targets:
 - Ubuntu 14.04 LTS "Trusty Tahr"
 - Ubuntu 12.04 LTS "Precise Pangolin"
 - Debian (untested)
-- RedHat (untested)
+- RedHat 
 
 Installation methods:
 - Binary packages from the system repos.
@@ -59,6 +61,9 @@ Still to do
 
 Changelog
 ---------
+### 0.3.3
+- support RedHat OS family
+
 ### 0.3.2
 - The package list is not being updated in playbooks anymore.
 
@@ -83,7 +88,7 @@ License
 -------
 The MIT License (MIT)
 
-Copyright (c) 2015, zenoamaro <zenoamaro@gmail.com>
+Copyright (c) 2015, Yajun Wang <kwin.wang@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

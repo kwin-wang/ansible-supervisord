@@ -1,7 +1,7 @@
 ---
 
 galaxy_info:
-  author: zenoamaro
+  author: Yajun Wang
   description: A role to install and configure Supervisord
   version: 0.3.2
   license: MIT
@@ -13,6 +13,7 @@ galaxy_info:
       versions:
         - precise
         - trusty
+    - name: RedHat
 
   categories:
     - monitoring
