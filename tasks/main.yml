@@ -3,11 +3,12 @@
 # Delegate further configuration to subtasks
 # placed in this same directory.
 
-- include: install.Debian.yml
-  when: ansible_os_family == "Debian"
-
-- include: install.RedHat.yml
-  when: ansible_os_family == "RedHat"
+- include: "{{item}}"
+  with_first_found:
+    - files:
+        - "install.{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+        - "install.{{ansible_distribution}}.yml"
+        - "install.{{ansible_os_family}}.yml"
 
 - include: configure.yml
 

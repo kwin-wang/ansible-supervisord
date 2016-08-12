@@ -9,7 +9,7 @@
 
 # The identifier string for this supervisor process, used by the RPC interface.
 supervisord_identifier: supervisor
-supervisord_service_name: "{{supervisord_identifier}}"
+supervisord_service_name: "{{supervisord_identifier}}d"
 
 supervisord_bin_dir:     "{{ '/usr/local/bin' if ansible_os_family == 'RedHat' else  '/usr/bin' }}"
 supervisord_conf_dir:    /etc/supervisor

@@ -2,7 +2,7 @@
 
 - name: restart supervisord
   sudo: yes
-  service: name=supervisor state=restarted
+  service: name={{supervisord_service_name}} state=restarted
 
 - name: reread supervisord
   sudo: yes
