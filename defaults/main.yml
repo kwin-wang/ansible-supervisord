@@ -11,13 +11,14 @@
 supervisord_identifier: supervisor
 supervisord_service_name: "{{supervisord_identifier}}"
 
-supervisord_bin_dir:     /usr/bin
+supervisord_bin_dir:     "{{ '/usr/local/bin' if ansible_os_family == 'RedHat' else  '/usr/bin' }}"
 supervisord_conf_dir:    /etc/supervisor
 supervisord_runtime_dir: /var/run
 
 supervisord_conf_file: "{{supervisord_conf_dir}}/supervisord.conf"
 supervisord_conf_file_link: "/etc/supervisord.conf"  # FIXME: This is too hardcoded
 supervisord_additional_conf_dir: "{{supervisord_conf_dir}}/conf.d"
+supervisord_conf_file_back: "{{supervisord_conf_file_link}}.bak.conf"
 
 supervisord_init_script: "/etc/init.d/{{supervisord_service_name}}"
 supervisord_daemon: "{{supervisord_bin_dir}}/supervisord"

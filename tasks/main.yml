@@ -3,8 +3,14 @@
 # Delegate further configuration to subtasks
 # placed in this same directory.
 
-- include: install.yml
+- include: install.Debian.yml
+  when: ansible_os_family == "Debian"
+
+- include: install.RedHat.yml
+  when: ansible_os_family == "RedHat"
+
 - include: configure.yml
+
 
 - name: Ensure supervisord is running
   sudo: yes

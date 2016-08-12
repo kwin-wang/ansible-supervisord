@@ -14,7 +14,7 @@
 
 - name: 'Role integration tests'
 
-  hosts: test
+  hosts: localhost
 
   vars:
     # custom_configuration: value
