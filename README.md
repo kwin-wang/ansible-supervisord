@@ -23,6 +23,7 @@ Supported targets:
 Installation methods:
 - Binary packages from the system repos.
 
+**Note:** the remote user must be in the supervisor group for running supervirctl command
 
 Usage
 -----

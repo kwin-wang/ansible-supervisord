@@ -18,6 +18,8 @@
 
   vars:
     # custom_configuration: value
+    supervisord_socket_chown: "{{supervisor_user}}:{{supervisor_group}}"
+    supervisord_socket_chmod: '0770'
 
   roles:
     - '.'    # The current directory itself is the role

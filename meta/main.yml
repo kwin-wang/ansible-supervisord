@@ -14,6 +14,7 @@ galaxy_info:
         - precise
         - trusty
     - name: RedHat
+    - name: Amazon
 
   categories:
     - monitoring

@@ -12,6 +12,10 @@
 
 - include: configure.yml
 
+- name: Add supervisor group
+  become: yes
+  become_user: root
+  group: name={{supervisor_group}} state=present
 
 - name: Ensure supervisord is running
   sudo: yes

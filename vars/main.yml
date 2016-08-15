@@ -1,0 +1,2 @@
+---
+supervisord_socket_chown: root:supervisor
